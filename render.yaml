@@ -1,0 +1,30 @@
+services:
+  - type: web
+    name: keyword-to-shopify
+    runtime: python
+    pythonVersion: 3.11
+    plan: starter
+    autoDeploy: true
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app.main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-4.1-mini
+      - key: SHOPIFY_STORE_DOMAIN
+        sync: false
+      - key: SHOPIFY_ACCESS_TOKEN
+        sync: false
+      - key: ENABLE_BACKGROUND_RUNNER
+        value: "false"
+      - key: INPUT_DIR
+        value: /var/data/input
+      - key: OUTPUT_DIR
+        value: /var/data/output
+      - key: POLL_INTERVAL_MINUTES
+        value: "1440"
+    disk:
+      name: collection-data
+      mountPath: /var/data
+      sizeGB: 1
