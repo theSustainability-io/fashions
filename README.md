@@ -54,6 +54,7 @@ Both input and output folders are created automatically on startup.
 
 ## API Usage
 
+- `GET /` or `GET /upload` - simple HTML form for manual testing.
 - `GET /health` - quick health probe.
 - `POST /process/latest?push_to_shopify=false` - process the most recent Excel file within `INPUT_DIR`.
 - `POST /process/upload` - multipart form upload with fields:

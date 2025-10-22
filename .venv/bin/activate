@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV=/Applications/XAMPP/xamppfiles/htdocs/myworkplace/fiverr/marlasfashions/.venv
+VIRTUAL_ENV=/Applications/XAMPP/xamppfiles/htdocs/myworkplace/fiverr/marlasfashions/fashions/.venv
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"
