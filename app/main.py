@@ -60,7 +60,7 @@ def _relative_output_path(path: Path) -> str:
 
 def _convert_result(result: ExcelProcessingResult, request: Request) -> ProcessResponse:
     relative_output = _relative_output_path(result.output_file)
-    output_url = request.url_for("download_processed_file", path=relative_output)
+    output_url = str(request.url_for("download_processed_file", path=relative_output))
     return ProcessResponse(
         input_file=str(result.input_file),
         output_file=str(result.output_file),
