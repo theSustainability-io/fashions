@@ -1,0 +1,5 @@
+{
+  "h2_heading": "Given the main collection keyword: {keyword}. Suggest one complementary, semantically relevant H2 subtopic that helps shoppers discover related items.\r\n- Keep it 2-5 words.\r\n- Avoid repeating the main keyword verbatim.\r\n- Be specific, non-brand, and non-location.\r\nReturn just the phrase.",
+  "paragraph": "Write an informative, customer-friendly paragraph (~{target_words} words) expanding on the subtopic: {subtopic} in the context of {keyword}.\r\n- Tone: helpful, concise, non-fluffy.\r\n- Include practical shopping guidance (fit, fabrics, occasions, styling).\r\n- No brand claims, no pricing.\r\n- Avoid keyword stuffing.\r\n- Return plain HTML <p> only (no inline styles).",
+  "h3_heading": "For the main keyword {keyword}, suggest another complementary subtopic for an H3 heading that differs from {h2_keyword}.\r\n- 2-5 words, concise, non-brand.\r\nReturn just the phrase."
+}
